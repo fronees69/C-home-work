@@ -1,33 +1,21 @@
 #include <iostream>
 using namespace std;
 
-bool isPrime(int number) 
+bool isEven(int number)
 {
-    if (number <= 1) 
-    {
-        return false; 
-    }
-    for (int i = 2; i * i <= number; i++) 
-    { 
-        if (number % i == 0) {
-            return false; 
-        }
-    }
-    return true; 
+    return number % 2 == 0;
 }
 
-int main() 
+int main()
 {
     int num;
     cout << "Enter number: ";
     cin >> num;
 
-    if (isPrime(num)) 
+    if (isEven(num))
     {
         cout << "number " << num << " is True." << endl;
-    }
-    else 
-    {
+    } else {
         cout << "number " << num << " is False." << endl;
     }
 
